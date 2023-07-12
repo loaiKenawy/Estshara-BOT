@@ -1,0 +1,199 @@
+{
+  "symptomsForLungCancer": {
+    "precision": 1.0,
+    "recall": 0.9074074074074074,
+    "f1-score": 0.9514563106796117,
+    "support": 54,
+    "confused_with": {
+      "symptomsForOralCancer": 3,
+      "symptomsForKidneyCancer": 1
+    }
+  },
+  "placeOfPain_Lung": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "medical_opinion": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 20,
+    "confused_with": {}
+  },
+  "placeOfPain_Kidney": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6,
+    "confused_with": {}
+  },
+  "out_of_scope": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 256,
+    "confused_with": {}
+  },
+  "opinion": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 43,
+    "confused_with": {}
+  },
+  "greet": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 14,
+    "confused_with": {}
+  },
+  "feelbad": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 14,
+    "confused_with": {}
+  },
+  "placeOfPain_breast": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6,
+    "confused_with": {}
+  },
+  "goodbye": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 12,
+    "confused_with": {}
+  },
+  "affirm": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 8,
+    "confused_with": {}
+  },
+  "checking on": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 20,
+    "confused_with": {}
+  },
+  "upload_image": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 3,
+    "confused_with": {}
+  },
+  "symptomsForBrainCancer": {
+    "precision": 0.9833333333333333,
+    "recall": 1.0,
+    "f1-score": 0.9915966386554621,
+    "support": 59,
+    "confused_with": {}
+  },
+  "symptomsForOralCancer": {
+    "precision": 0.926829268292683,
+    "recall": 1.0,
+    "f1-score": 0.9620253164556963,
+    "support": 38,
+    "confused_with": {}
+  },
+  "placeOfPain_Head": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 11,
+    "confused_with": {}
+  },
+  "placeOfPain_oral": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 16,
+    "confused_with": {}
+  },
+  "explain": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4,
+    "confused_with": {}
+  },
+  "placeOfPain": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 14,
+    "confused_with": {}
+  },
+  "chatbotAsk": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4,
+    "confused_with": {}
+  },
+  "what's your fav": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 99,
+    "confused_with": {}
+  },
+  "UserWantsToKnowMoreAboutChatbot": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 32,
+    "confused_with": {}
+  },
+  "symptomsForKidneyCancer": {
+    "precision": 0.9523809523809523,
+    "recall": 1.0,
+    "f1-score": 0.975609756097561,
+    "support": 20,
+    "confused_with": {}
+  },
+  "symptomsForBreastCancer": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 42,
+    "confused_with": {}
+  },
+  "deny": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 8,
+    "confused_with": {}
+  },
+  "accuracy": 0.9938118811881188,
+  "macro avg": {
+    "precision": 0.9945017421602788,
+    "recall": 0.9962962962962963,
+    "f1-score": 0.9952275208755332,
+    "support": 808
+  },
+  "weighted avg": {
+    "precision": 0.9941631162245145,
+    "recall": 0.9938118811881188,
+    "f1-score": 0.9937524747582166,
+    "support": 808
+  },
+  "micro avg": {
+    "precision": 0.9938118811881188,
+    "recall": 0.9938118811881188,
+    "f1-score": 0.9938118811881188,
+    "support": 808
+  }
+}

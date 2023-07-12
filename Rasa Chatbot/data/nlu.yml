@@ -1,0 +1,882 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Hi
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - ok, bye
+    - okay bye
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yes, I have
+    - ok
+- intent: opinion
+  examples: |
+    - What do you think about this idea?
+    - Could you give me your opinion on this matter?
+    - I'm interested in hearing your thoughts on this topic.
+    - How do you feel about this proposal?
+    - Do you have an opinion on this issue?
+    - What's your take on this situation?
+    - Would you mind sharing your opinion on this decision?
+    - What do you make of this news?
+    - What's your stance on this controversy?
+    - Do you think this plan will work?
+    - What's your perspective on this issue?
+    - Can I get your opinion on this policy?
+    - What do you reckon about this approach?
+    - How do you see this situation playing out?
+    - What's your view on this matter?
+    - Do you think this is a good idea?
+    - What's your opinion on this topic?
+    - What do you think about this trend?
+    - How do you feel about this development?
+    - What's your take on this change?
+    - Do you have an opinion on this matter?
+    - What do you think about this product?
+    - Can I get your thoughts on this proposal?
+    - What's your position on this issue?
+    - Would you mind sharing your thoughts on this topic?
+    - What do you think about this event?
+    - How do you feel about this issue?
+    - What's your take on this issue?
+    - Do you think this is a good move?
+    - What's your opinion on this decision?
+    - Can I get your perspective on this matter?
+    - What do you make of this situation?
+    - How do you see this issue being resolved?
+    - What's your view on this issue?
+    - Do you think this is the right approach?
+    - What's your opinion on this strategy?
+    - Do you have an opinion on this decision?
+    - What do you think about this issue?
+    - Can I get your thoughts on this topic?
+    - What's your position on this matter?
+    - Would you mind sharing your thoughts on this issue?
+    - What's your take on this event?
+    - Can I get your perspective on this issue?
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - naah
+- intent: feelbad
+  examples: |
+    - not feeling very well
+    - don't feel well
+    - sick
+    - unwell
+    - not okay
+    - very ill
+    - weak
+    - Feeling down
+    - Feeling off
+    - very tired
+    - very run-down lately
+    - bad
+    - I feel so bad
+    - i don't feel well
+- intent: UserWantsToKnowMoreAboutChatbot
+  examples: |
+    - What exactly are you?
+    - Can you describe yourself to me?
+    - Who made you and why?
+    - What's your purpose?
+    - Tell me more about you
+    - What else can you tell me about yourself?
+    - I want to know more about you
+    - Can you give me more information about yourself?
+    - What makes you unique?
+    - Describe yourself
+    - What are your features?
+    - How do you compare to other chatbots?
+    - What inspired your creation?
+    - How do you continue to improve?
+    - What kind of data do you use to learn?
+    - What are your goals?
+    - Are there any upcoming updates or improvements?
+    - Can you tell me about your development team?
+    - How do you stay up-to-date with new technology?
+    - What do you think sets you apart from other chatbots?
+    - What kind of feedback do you receive and use to improve?
+    - How do you ensure user satisfaction?
+    - Can you provide examples of successful interactions you've had with users?
+    - what is this application is used for?
+    - am i talking to a doctor or a nurse?
+    - are you a doctor?
+    - what certificates do you have ?
+    - who am i speaking to?
+    - do i speak to a doctor?
+    - do i speak to a nurse?
+    - i need to talk to a doctor
+    - i need doctor
+- intent: medical_opinion
+  examples: |
+    - Can you give me your medical opinion?
+    - What's your take on my medical condition?
+    - Do you have an opinion on my symptoms?
+    - I'd like to hear your medical opinion on my diagnosis.
+    - Can you provide me with a medical opinion on my test results?
+    - What's your medical opinion on my treatment options?
+    - I'm curious to know your medical opinion on my health issue.
+    - What is your professional medical opinion on my illness?
+    - Could you share your medical opinion on my medical history?
+    - I'd appreciate your medical opinion on my lab results.
+    - What's your medical opinion on my current state of health?
+    - Can you give me your medical opinion on my prognosis?
+    - I'm seeking a medical opinion on my condition, can you help?
+    - What's your medical opinion on my symptoms and their severity?
+    - Can you give me your expert medical opinion on my health concern?
+    - What is your medical opinion on the best course of treatment for my condition?
+    - I'm interested in hearing your medical opinion on my diagnosis and potential complications.
+    - Can you provide a medical opinion on my medical records and history?
+    - What's your medical opinion on my likelihood of recovery?
+    - I'd like your medical opinion on whether surgery is the best option for my condition.
+- intent: how_to_use_chatbot
+  examples: |
+    - How do I use this chatbot?
+    - Can you show me how to use this chatbot?
+    - What's the best way to use this chatbot?
+    - Can you explain how to talk to this chatbot?
+    - I'm not sure how to use this chatbot, can you help?
+    - What should I do to get started with this chatbot?
+    - Could you guide me on how to use this chatbot?
+    - How can I interact with this chatbot?
+    - What are the steps to use this chatbot?
+    - i don't know what to do?
+    - what should i type
+    - what should i say
+    - how should i use you
+    - what is the instructions
+    - tell me what to do
+    - how does it really works
+    - How do I know if I'm using this chatbot correctly?
+- intent: what's your fav
+  examples: |
+    - What's your favorite color?
+    - Do you have any pets?
+    - What's your favorite food?
+    - What's your favorite book?
+    - What's your favorite movie?
+    - What's your favorite song?
+    - What's your favorite hobby?
+    - Do you like sports?
+    - What's your favorite sport?
+    - What's your favorite TV show?
+    - What's your favorite place to travel?
+    - Do you have any siblings?
+    - What's your favorite type of cuisine?
+    - What's your favorite type of music?
+    - What kind of music do you listen to?
+    - What's your favorite band?
+    - What's your favorite animal?
+    - Do you like coffee or tea?
+    - What's your favorite brand?
+    - What's your favorite game?
+    - What's your favorite social media platform?
+    - What's your favorite holiday?
+    - What's your favorite season?
+    - What's your favorite time of day?
+    - What's your favorite type of weather?
+    - What's your favorite type of flower?
+    - What's your favorite type of tree?
+    - What's your favorite type of car?
+    - Do you have any tattoos?
+    - Do you have any piercings?
+    - What's your favorite type of art?
+    - What's your favorite thing to do in your free time?
+    - What's your favorite type of exercise?
+    - What's your favorite type of dance?
+    - What's your favorite type of cuisine to cook?
+    - What's your favorite type of drink?
+    - What's your favorite type of dessert?
+    - What's your favorite type of candy?
+    - What's your favorite type of fruit?
+    - What's your favorite type of vegetable?
+    - What's your favorite type of bread?
+    - What's your favorite type of cheese?
+    - What's your favorite type of meat?
+    - What's your favorite type of fish?
+    - What's your favorite type of shellfish?
+    - What's your favorite type of soup?
+    - What's your favorite type of sandwich?
+    - What's your favorite type of pizza?
+    - What's your favorite type of pasta?
+    - What's your favorite type of rice?
+    - What's your favorite type of noodle?
+    - What's your favorite type of sauce?
+    - What's your favorite type of seasoning?
+    - What's your favorite type of snack?
+    - What's your favorite type of cereal?
+    - What's your favorite type of milk?
+    - What's your favorite type of juice?
+    - What's your favorite type of smoothie?
+    - What's your favorite type of protein bar?
+    - What's your favorite type of energy drink?
+    - What's your favorite type of restaurant?
+    - What's your favorite type of fast food?
+    - What's your favorite type of cuisine to try?
+    - What's your favorite type of beer?
+    - What's your favorite type of wine?
+    - What's your favorite type of cocktail?
+    - What's your favorite type of liquor?
+    - What's your favorite type of non-alcoholic drink?
+    - What's your favorite type of tea?
+    - What's your favorite type of coffee?
+    - What's your favorite type of chocolate?
+    - What's your favorite type of ice cream?
+    - What's your favorite type of frozen yogurt?
+    - What's your favorite type of cake?
+    - What's your favorite type of pie?
+    - What's your favorite type of cookie?
+    - What's your favorite type of donut?
+    - What's your favorite type of muffin?
+    - What's your favorite type of cracker?
+    - What's your favorite type of chip?
+    - What's your favorite type of dip?
+    - What's your favorite type of salsa?
+    - What's your favorite type of guacamole?
+    - What's your favorite type of hummus?
+    - What's your favorite type of cheese dip?
+    - What's your favorite type of hot sauce?
+    - What's your favorite type of barbecue sauce?
+    - What's your favorite type of salad dressing?
+    - What's your favorite type of marinade?
+    - What's your favorite type of condiment?
+    - What's your favorite type of jam?
+    - What's your favorite type of jelly?
+    - What's your favorite type of nut butter?
+    - What's your favorite type of honey?
+    - What's your favorite type of syrup?
+    - What's your favorite type of oil?
+    - What's your favorite type of vinegar?
+    - What's your favorite type of seasoning blend?
+    - What's your favorite type of spice?
+- intent: checking on
+  examples: |
+    - How are you?
+    - How have you been?
+    - How's it going?
+    - Are you doing well?
+    - What's new?
+    - How's everything?
+    - How's life treating you?
+    - How's your day going?
+    - How are things?
+    - How's your week been?
+    - How's your family?
+    - How are you feeling?
+    - How's your health?
+    - How's your job?
+    - How are your studies going?
+    - How's your weekend so far?
+    - How are you holding up?
+    - How's the weather treating you?
+    - How's your mood?
+    - How's your love life?
+- intent: symptomsForBrainCancer
+  examples: |
+    - [yes, I have headache](headache_symptoms)
+    - [i feel headache](headache_symptoms)
+    - [Head pain](headache_symptoms)
+    - [Brain pain](headache_symptoms)
+    - [Skull pain](headache_symptoms)
+    - [Brain ache](headache_symptoms)
+    - [Migraine](headache_symptoms)
+    - [Forehead ache](headache_symptoms)
+    - [Head pain behind the eyes](headache_symptoms)
+    - [Head pain in the eyes](headache_symptoms)
+    - [Headache spell](headache_symptoms)
+    - [Headache in the eyes](headache_symptoms)
+    - [Headache behind the eyes](headache_symptoms)
+    - [headache](headache_symptoms)
+    - [Throw up](vomit_symptoms)
+    - [Barf](vomit_symptoms)
+    - [Puke](vomit_symptoms)
+    - [Vomit up](vomit_symptoms)
+    - [Upset stomach](vomit_symptoms)
+    - [Throw out](vomit_symptoms)
+    - [Spew](vomit_symptoms)
+    - [vomit](vomit_symptoms) and [drowsiness](vomit_symptoms)
+    - [mental](mental_symtoms) or [behavioral changes](mental_symtoms)
+    - [Behavioral shifts](mental_symtoms)
+    - [Behavioral modifications](mental_symtoms)
+    - [Shifts in behavior](mental_symtoms)
+    - [Shifts in reactions](mental_symtoms)
+    - [vision](vision_speech_symtoms) or [speech problems](vision_speech_symtoms)
+    - [Vision loss](vision_speech_symtoms)
+    - [Vision disorder](vision_speech_symtoms)
+    - [Blurred vision](vision_speech_symtoms)
+    - [Blurred eyesight](vision_speech_symtoms)
+    - [Hazy vision](vision_speech_symtoms)
+    - [Reduced vision](vision_speech_symtoms)
+    - [Loss of vision](vision_speech_symtoms)
+    - [Poor vision](vision_speech_symtoms)
+    - [Reduced eyesight](vision_speech_symtoms)
+    - [Visual problem](vision_speech_symtoms)
+    - [Visual trouble](vision_speech_symtoms)
+    - [Visual distortion](vision_speech_symtoms)
+    - [Distorted eyesight](vision_speech_symtoms)
+    - [Diminished eyesight](vision_speech_symtoms)
+    - [Altered eyesight](vision_speech_symtoms)
+    - [Distorted vision](vision_speech_symtoms)
+    - [Altered vision](vision_speech_symtoms)
+    - [Fuzzy vision](vision_speech_symtoms)
+    - [Speech difficulty](vision_speech_symtoms)
+    - [Speech disorder](vision_speech_symtoms)
+    - [Speech impairment](vision_speech_symtoms)
+    - [Speech problem](vision_speech_symtoms)
+    - [Speech issue](vision_speech_symtoms)
+    - [Speaking difficulty](vision_speech_symtoms)
+    - [Speaking disorder](vision_speech_symtoms)
+    - [Speaking problem](vision_speech_symtoms)
+    - [Speaking issue](vision_speech_symtoms)
+    - [Speaking distortion](vision_speech_symtoms)
+    - [Speaking deficit](vision_speech_symtoms)
+    - [seizures](seizures_symptoms)
+    - [headache and](headache_symptoms) [vomit](vomit_symptoms)
+- intent: symptomsForBreastCancer
+  examples: |
+    - [New lump in the breast and underarm](breast_lump)
+    - [New lump in the breast](breast_lump)
+    - [New lump in the underarm](breast_lump)
+    - [lump in breast](breast_lump)
+    - [lump in underarm](breast_lump)
+    - [Peeling of the pigmented area of skin surrounding the nipple ](breast_skin)
+    - [scaling of the pigmented area of of skin surrounding the nipple](breast_skin)
+    - [flaking of the pigmented area of of skin surrounding the nipple](breast_skin)
+    - [crusting of the pigmented area of of skin surrounding the nipple](breast_skin)
+    - [Peeling of the pigmented area of skin surrounding the breast skin](breast_skin)
+    - [scaling of the pigmented area of of skin surrounding the breast skin](breast_skin)
+    - [flaking of the pigmented area of of skin surrounding the breast skin](breast_skin)
+    - [crusting of the pigmented area of of skin surrounding the breast skin](breast_skin)
+    - [Thickening of part of the breast](thick_or_swell)
+    - [swelling of part of the breast](thick_or_swell)
+    - [dimpling of breast skin](Dimpling)
+    - [irritation of breast skin](irritaion_dimpling)
+    - [Redness skin in the nipple area](Redness_skin)
+    - [Redness skin in the breast](Redness_skin)
+    - [flaky skin in the nipple area](Redness_skin)
+    - [flaky skin in the breast](Redness_skin)
+    - [Pain in any area of the breast](breast_pain)
+    - [Pain in the breast](breast_pain)
+    - [breast pain](breast_pain)
+    - [Nipple discharge other than breast milk, including blood](nipple_discharge)
+    - [Dimpling of the breast skin](Dimpling)
+    - [dimpling of the breast skin](Dimpling)
+    - [Nipple retraction](Nipple_retraction)
+    - [nipple retraction](Nipple_retraction)
+    - [Swollen lymph nodes near the collar bone](swollen_lumph_nodes)
+    - [Swollen lymph nodes under the arm](swollen_lumph_nodes)
+    - [Growing veins on the breast](Growing_veins)
+    - [growing veins on the breast](Growing_veins)
+    - [Sunken nipple](Sunken_nipple)
+    - [sunken nipple](Sunken_nipple)
+    - [alteration in size of a breast](alternation_in_appearance)
+    - [alteration in shape of a breast](alternation_in_appearance)
+    - [alteration in appearance of a breast](alternation_in_appearance)
+    - [change in size of a breast](alternation_in_appearance)
+    - [change in shape of a breast](alternation_in_appearance)
+    - [change in appearance of a breast](alternation_in_appearance)
+    - [abnormal nipple discharge](nipple_discharge)
+- intent: symptomsForKidneyCancer
+  examples: |
+    - a persistent pain in your lower back or side, just below your ribs
+    - night sweats
+    - Fever that is not caused by an infection and that doesn't go away
+    - [A mass or lump in the side or back](back_lump)
+    - [Blood in your urine](urine_blood)
+    - [Pain in your back or side that doesn't go away](back_pain)
+    - [Loss of appetite](kidney_appetite_loss)
+    - [Unexplained weight loss](kidney_weight_loss)
+    - [Tiredness](kidney_tiredness)
+    - [Fever](kidney_fever)
+    - [pee is darker than usual or reddish in colour](dark_pee)
+    - [persistent high blood pressure](Kidney_blood_pressure)
+    - [a high temperature](Kidney_high_temp)
+    - [in men, swelling of the veins in the testicles](testicles_viens)
+    - [swollen glands in your neck](swollen_glands)
+    - [bone pain](Kidney_bone_pain)
+    - [Fatigue](Kidney_fatigue)
+    - [Testicle swelling](testicle_swelling)
+    - [Swelling of the legs or ankles](leg_swelling)
+    - [Anemia](Kidney_anemia)
+- intent: symptomsForOralCancer
+  examples: |
+    - [sore mouth ulcers that do not heal within several weeks](mouth_ulcers)
+    - [unintentional weight loss](mouth_weight_loss)
+    - [weight loss](mouth_weight_loss)
+    - [one or more teeth that becomes loose for no obvious reason](loose_teeth)
+    - [Unexplained bleeding in the mouth](mouth_bleeding)
+    - [bleeding in the mouth](mouth_bleeding)
+    - [mouth bleeding](mouth_bleeding)
+    - [Difficulty chewing](diff_swallowing)
+    - [Difficulty swallowing](diff_swallowing)
+    - [Difficulty speaking](diff_speaking)
+    - [change in voice](voice_change)
+    - [red or white patches on the lining of your mouth](red_white_patches_lining)
+    - [A lip sore that doesn't heal](lip_or_sore)
+    - [A mouth sore that doesn't heal](lip_or_sore)
+    - [A white or reddish patch on the inside the mouth](red_white_patches)
+    - [Loose teeth](loose_teeth)
+    - [A lump inside the mouth](growth_or_lump)
+    - [A growth inside the mouth](growth_or_lump)
+    - [Ear pain](ear_pain)
+    - [ear pain](ear_pain)
+    - [Mouth pain](mouth_pain)
+    - [mouth pain](mouth_pain)
+    - [Difficult or painful swallowing](diff_swallowing)
+    - [dysphagia](dysphagia)
+    - [bleeding or numbness in the mouth](mouth_bleeding_or_numbness)
+    - [a tooth socket that does not heal after a tooth is removed](tooth_socket)
+    - [difficulty moving the jaw](jaw_movement)
+    - [eroded areas on the lips](erode_areas)
+    - [eroded areas on the gums](erode_areas)
+    - [eroded areas on the cheek](erode_areas)
+    - [eroded areas inside the mouth](erode_areas)
+    - [Difficulty moving the tongue](tongue_movement)
+    - [Difficulty in tongue movement](tongue_movement)
+    - [Leukoplakia](Leukoplakia)
+    - [Erythroplakia](Erythroplakia)
+    - [Chronic bad breath](bad_breath)
+    - [stiffness](stifness)
+    - [Leukoplakia and](Leukoplakia) [Erythroplakia and](Erythroplakia) [stiffness](stifness)
+    - [Erythroplakia](Erythroplakia)
+- intent: symptomsForLungCancer
+  examples: |
+    - [Coughing](coughing)
+    - [Chest Pain](chest_pain)
+    - [Shortness Of Breath](shortness_breath)
+    - [Shortness of breath](shortness_breath)
+    - [Breathlessness](shortness_breath)
+    - [difficulty breathing](shortness_breath)
+    - [Wheezing](wheezing)
+    - [wheezing](wheezing)
+    - [Coughing UP Blood](coughing_blood)
+    - [coughing up blood](coughing_blood)
+    - [Feel Tired All The Time](feel_tired)
+    - [feel tired all the time](feel_tired)
+    - [Feel Tired](feel_tired)
+    - [feel tired](feel_tired)
+    - [Weight Loss](lung_weight_loss)
+    - [weight loss](lung_weight_loss)
+    - [Losing weight](lung_weight_loss)
+    - [Dropping pounds](lung_weight_loss)
+    - [losing weight](lung_weight_loss)
+    - [dropping pounds](lung_weight_loss)
+    - [repeated bouts of pneumonia and swollen](pneumonia)
+    - [repeated bouts of pneumonia](pneumonia)
+    - [pneumonia](pneumonia)
+    - [High Temperature](lung_high_temp)
+    - [high temperature](lung_high_temp)
+    - [headache](ache)
+    - [Muscles Ache](muscle_ache)
+    - [muscles ache](muscle_ache)
+    - [Changes in the appearance of fingers shapes](change_appearance)
+    - [finger clubbing](change_appearance)
+    - [difficulty swallowing](swallowing)
+    - [Difficulty eating or drinking](swallowing)
+    - [Swallowing problems](swallowing)
+    - [Feeling like food is stuck in your throat](swallowing)
+    - [Swelling of Face](swelling_face_neck)
+    - [Swelling of Neck](swelling_face_neck)
+    - [swelling of your face and neck](swelling_face_neck)
+    - [swelling of face](swelling_face_neck)
+    - [swelling of neck](swelling_face_neck)
+    - [Loss Of Appetite](lung_loss_appetite)
+    - [Not feeling like eating](lung_loss_appetite)
+    - [Loss of interest in food](lung_loss_appetite)
+    - [Early satiety](lung_loss_appetite)
+    - [Reduced appetite](lung_loss_appetite)
+    - [Bone Pain](lung_bone_pain)
+    - [Yellowing of skin](yellow_skin)
+    - [Yellowing of eyes](yellow_eyes)
+    - [weakness of an arm](weakness_arm_leg) or [weakness of leg](weakness_arm_leg)
+    - [numbness of an arm](arm_leg_numbness) or [numbness of a leg](arm_leg_numbness)
+    - [Dizziness](dizziness)
+    - [dizziness](dizziness)
+    - [Dry Mouth](mouth_dryness)
+    - [dry mouth](mouth_dryness)
+    - [Chest Pain](chest_pain) , [Feel Tired All The Time](feel_tired) , [pneumonia](pneumonia) , [Dizziness](dizziness) , [Dry Mouth](mouth_dryness) , [Loss Of Appetite](lung_loss_appetite) , [Swelling of Face](swelling_face_neck) , [difficulty swallowing](diff_swallowing) , [Shortness Of Breath](shortness_breath) , [Wheezing](wheezing) , [Coughing UP Blood](coughing_blood) , [Muscles Ache](muscle_ache) , [Changes in the appearance of fingers shapes](change_appearance) , [numbness of an arm](arm_leg_numbness)
+- intent: chatbotAsk
+  examples: |
+    - Let Chatbot Ask
+    - let chatbot ask
+    - chatbot ask
+    - ask me
+- intent: explain
+  examples: |
+    - Let me explain
+    - i explain
+    - let me explain
+    - Talk more about it
+    - i will explain
+- intent: upload_image
+  examples: |
+    - Can I upload an image?
+    - Please upload a picture.
+    - I have an image to share.
+- intent: out_of_scope
+  examples: |
+    - hgjhhhjf
+    - vgdf
+    - sddfsdffdry
+    - vvfdr
+    - nmjklop
+    - hahaha
+    - hah
+    - fdgfdfd
+    - nhfsz
+    - " "
+    - I want to wake up early tomorrow
+    - I need to wake up at 6 am
+    - Can you help me wake up on time?
+    - I struggle with waking up early
+    - What can I do to wake up earlier?
+    - I want to become a morning person
+    - How do I stop hitting snooze?
+    - I need to start waking up earlier for work
+    - What's the best way to wake up feeling refreshed?
+    - I want to establish a morning routine
+    - How can I train myself to wake up earlier?
+    - I want to be able to wake up without an alarm
+    - I need to start waking up earlier to exercise
+    - How can I make waking up early a habit?
+    - I want to start my day earlier
+    - How can I wake up naturally without an alarm clock?
+    - I want to avoid feeling groggy in the morning
+    - How can I motivate myself to get out of bed earlier?
+    - I need to adjust my sleep schedule to wake up earlier
+    - How can I stay awake and alert in the morning?
+    - What is the population of New York City?
+    - How many people live in London?
+    - What is the population of Tokyo?
+    - How many residents are there in Mumbai?
+    - What is the population of Los Angeles?
+    - How many people live in Paris?
+    - What is the population of Beijing?
+    - How many residents are there in Cairo?
+    - What is the population of Moscow?
+    - How many people live in Rio de Janeiro?
+    - What is the population of Sydney?
+    - How many residents are there in New Delhi?
+    - What is the population of Istanbul?
+    - How many people live in Shanghai?"
+    - What is the population of Buenos Aires?
+    - How many residents are there in Toronto?
+    - What is the population of Berlin?
+    - How many people live in Mexico City?
+    - What is the population of Jakarta?
+    - How many residents are there in Seoul?
+    - What is the population of Manila?
+    - How many people live in Sao Paulo?
+    - What is the population of Nairobi?
+    - How many residents are there in Chicago?
+    - What is the population of Madrid?
+    - How many people live in Rome?
+    - What is the population of Chennai?
+    - How many residents are there in Houston?
+    - What is the population of Miami?
+    - How many people live in Bangalore?
+    - What is the population of Vienna?
+    - How many residents are there in Amsterdam?
+    - What is the population of Bangkok?
+    - How many people live in Dublin?
+    - What is the population of Kiev?
+    - How many residents are there in Montreal?
+    - What is the population of Munich?
+    - How many people live in Oslo?
+    - What is the population of Prague?
+    - How many residents are there in Stockholm?
+    - What is the population of Warsaw?
+    - How many people live in Zurich?
+    - What is the GDP of the United States?
+    - How much money does Japan earn in a year?
+    - What is the GDP of China?
+    - How much money does Germany make annually?
+    - What is the GDP of France?
+    - How much money does the United Kingdom generate each year?
+    - What is the GDP of Italy?
+    - How much money does Brazil earn annually?
+    - What is the GDP of India?
+    - How much money does Canada make each year?
+    - What is the GDP of Australia?
+    - How much money does South Korea generate annually?
+    - What is the GDP of Russia?
+    - How much money does Spain make each year?
+    - What is the GDP of Mexico?
+    - How much money does Indonesia earn annually?
+    - What is the GDP of Turkey?
+    - How much money does the Netherlands generate each year?
+    - What is the GDP of Saudi Arabia?
+    - How much money does Switzerland make annually?
+    - What is the GDP of Argentina?
+    - How much money does Sweden earn each year?
+    - What is the GDP of Poland?
+    - What is the unemployment rate in the United States?
+    - How many people are unemployed in Japan?
+    - What is the unemployment rate in China?
+    - How many people are unemployed in Germany?
+    - What is the unemployment rate in France?
+    - How many people are unemployed in the United Kingdom?
+    - What is the unemployment rate in Italy?
+    - How many people are unemployed in Brazil?
+    - What is the unemployment rate in India?
+    - How many people are unemployed in Canada?
+    - What is the unemployment rate in Australia?
+    - How many people are unemployed in South Korea?
+    - What is the unemployment rate in Russia?
+    - How many people are unemployed in Spain?
+    - What is the unemployment rate in Mexico?
+    - How many people are unemployed in Indonesia?
+    - What is the unemployment rate in Turkey?
+    - How many people are unemployed in the Netherlands?
+    - What is the unemployment rate in Saudi Arabia?
+    - How many people are unemployed in Switzerland?
+    - What is the unemployment rate in Argentina?
+    - How many people are unemployed in Sweden?
+    - What is the unemployment rate in Poland?
+    - How many people are unemployed in Belgium?
+    - What is the unemployment rate in Thailand?
+    - How many people are unemployed in Austria?
+    - What is the unemployment rate in Norway?
+    - How many people are unemployed in Iran?
+    - What is the unemployment rate in United Arab Emirates?
+    - How many people are unemployed in Nigeria?
+    - What is the unemployment rate in Israel?
+    - How many people are unemployed in Ireland?
+    - What is the unemployment rate in Hong Kong?
+    - How many people are unemployed in Denmark?
+    - What is the unemployment rate in Singapore?
+    - How many people are unemployed in Egypt?
+    - What is the unemployment rate in Malaysia?
+    - How many people are unemployed in South Africa?
+    - What is the unemployment rate in Colombia?
+    - How many people are unemployed in Finland?
+    - What is the unemployment rate in Chile?
+    - I love playing video games
+    - I enjoy reading books
+    - My hobby is collecting stamps
+    - I like to go fishing
+    - I love watching movies
+    - I enjoy playing guitar
+    - I like to paint and draw
+    - My hobby is hiking
+    - I love to cook
+    - I enjoy gardening
+    - I love pizza
+    - My favorite food is sushi
+    - I enjoy eating tacos
+    - I like to eat burgers
+    - I love ice cream
+    - My favorite cuisine is Italian
+    - I enjoy eating Thai food
+    - I like to eat Chinese food
+    - I love chocolate
+    - My favorite drink is coffee
+    - I love listening to pop music
+    - My favorite band is Coldplay
+    - I enjoy listening to classical music
+    - I like to listen to jazz
+    - I love rock music
+    - My favorite singer is Adele
+    - I enjoy listening to hip hop
+    - I like to listen to country music
+    - I love electronic music
+    - My favorite genre is R&B
+    - I love playing basketball
+    - My favorite sport is soccer
+    - I enjoy playing tennis
+    - I like to go swimming
+    - I love watching football
+    - My favorite team is the Lakers
+    - I enjoy playing golf
+    - I like to go running
+    - I love watching baseball
+    - My favorite athlete is Serena Williams
+    - I love to travel to new places
+    - My favorite destination is Hawaii
+    - I enjoy going to the beach
+    - I like to visit national parks
+    - I love exploring new cities
+    - My favorite country is Italy
+    - I enjoy going on road trips
+    - I like to go camping
+    - I love to explore museums
+    - My favorite activity is snorkeling
+    - I love dogs
+    - My favorite breed is Golden Retriever
+    - I enjoy playing with cats
+    - I like to watch birds
+    - I love horses
+    - My favorite animal is a koala
+    - I enjoy taking care of fish
+    - I like to watch butterflies
+    - I love to observe turtles
+    - My favorite pet is a rabbit
+    - I love reading Harry Potter
+    - My favorite author is Stephen King
+    - I enjoy reading non-fiction books
+    - I like to read science fiction
+    - I love reading mystery novels
+    - My favorite book is To Kill a Mockingbird
+    - I enjoy reading historical fiction
+    - I like to read biographies
+    - I love reading poetry
+    - My favorite genre is fantasy
+    - I love watching romantic comedies
+    - My favorite movie is The Godfather
+    - I enjoy watching action movies
+    - I like to watch documentaries
+    - I love watching animated movies
+    - My favorite director is Christopher Nolan
+    - I enjoy watching horror movies
+    - I like to watch foreign films
+    - I love watching science fiction movies
+    - My favorite actor is Tom Hanks
+    - I love watching Friends
+    - My favorite TV show is Game of Thrones
+    - I enjoy watching reality shows
+    - I like to watch crime dramas
+    - I love watching sitcoms
+    - My favorite genre is science fiction
+    - I enjoy watching cooking shows
+    - I like to watch travel shows
+    - I love watching historical dramas
+    - My favorite TV personality is Ellen DeGeneres
+    - I love going to art museums
+    - My favorite artist is Pablo Picasso
+    - I enjoy painting with watercolors
+    - I like to draw with charcoal
+    - I love going to art galleries
+    - My favorite style is impressionism
+    - I enjoy creating digital art
+    - I like to take photographs
+    - I love visiting street art murals
+    - My favorite medium is sculpture
+    - I hate spiders
+    - I can't stand rude people
+    - I detest broccoli
+    - I loathe public speaking
+    - I despise traffic
+    - I can't stand being late
+    - I hate cold weather
+    - I detest waking up early
+    - I loathe horror movies
+    - I despise cleaning
+    - I can't stand crowded places
+    - I hate getting lost
+    - I detest noisy neighbors
+    - I loathe slow internet
+    - I despise bad customer service
+    - I can't stand being stuck in traffic
+    - I hate waiting in line
+    - I detest loud music
+    - I loathe getting spam emails
+    - I despise rude drivers
+- intent: placeOfPain_breast
+  examples: |
+    - In my breast
+    - breast
+    - nipple
+    - in my nipple
+    - my breast
+    - my nipple
+- intent: placeOfPain_Lung
+  examples: |
+    - In my lung
+    - Respiratory organ
+    - chest
+    - in my chest
+    - lung
+- intent: placeOfPain_Kidney
+  examples: |
+    - The area between my ribs and hips
+    - The lower part of my back
+    - The upper part of my urinary tract
+    - kidney
+    - in my kidney
+    - my kidney
+- intent: placeOfPain_oral
+  examples: |
+    - In my mouth
+    - The space between my lips and throat
+    - mouth
+    - in my tongue
+    - tongue
+    - oral
+    - in my oral
+    - my mouth
+    - my oral
+    - my tongue
+    - teeth
+    - my teeth
+    - in my teeth
+    - lips
+    - in my lips
+    - my lips
+    - in my mouth
+- intent: placeOfPain
+  examples: |
+    - In my leg
+    - leg
+    - arm
+    - hand
+    - finger
+    - elbow
+    - eye
+    - stomach
+    - nose
+    - toes
+    - hair
+    - heart
+    - foot
+    - hips
+- intent: placeOfPain_Head
+  examples: |
+    - In my head
+    - head
+    - Head
+    - brain
+    - Brain
+    - in my brain
+    - Skull
+    - skull
+    - In my brain
+    - im my head
+    - in my head

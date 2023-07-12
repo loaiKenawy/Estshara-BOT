@@ -1,0 +1,1081 @@
+version: '3.1'
+intents:
+- UserWantsToKnowMoreAboutChatbot
+- affirm
+- askme
+- chatbotAsk
+- checking on
+- deny
+- explain
+- feelbad
+- goodbye
+- greet
+- how_to_use_chatbot
+- medical_opinion
+- opinion
+- out_of_scope
+- placeOfPain
+- placeOfPain_Head
+- placeOfPain_Kidney
+- placeOfPain_Lung
+- placeOfPain_breast
+- placeOfPain_oral
+- symptomsForBrainCancer
+- symptomsForBreastCancer
+- symptomsForKidneyCancer
+- symptomsForLungCancer
+- symptomsForOralCancer
+- what's your fav
+entities:
+- Erythroplakia
+- change_appearance
+- feel_tired
+- chest_pain
+- lung_loss_appetite
+- swelling_face_neck
+- pneumonia
+- dizziness
+- coughing_blood
+- muscle_ache
+- mouth_dryness
+- wheezing
+- shortness_breath
+- arm_leg_numbness
+- diff_swallowing
+- Leukoplakia
+- stifness
+- breast_pain
+- headache_symptoms
+- vomit_symptoms
+- mental_symtoms
+- seizures_symptoms
+- vision_speech_symtoms
+- coughing
+- lung_weight_loss
+- lung_high_temp
+- ache
+- swallowing
+- lung_bone_pain
+- yellow_skin
+- yellow_eyes
+- weakness_arm_leg
+- breast_lump
+- breast_skin
+- thick_or_swell
+- irritaion_dimpling
+- Redness_skin
+- alternation_in_appearance
+- nipple_discharge
+- Dimpling
+- Nipple_retraction
+- swollen_lumph_nodes
+- Growing_veins
+- Sunken_nipple
+- back_lump
+- urine_blood
+- back_pain
+- kidney_appetite_loss
+- kidney_weight_loss
+- kidney_tiredness
+- kidney_fever
+- dark_pee
+- Kidney_blood_pressure
+- Kidney_high_temp
+- testicles_viens
+- swollen_glands
+- Kidney_bone_pain
+- Kidney_fatigue
+- testicle_swelling
+- leg_swelling
+- Kidney_anemia
+- mouth_ulcers
+- mouth_weight_loss
+- loose_teeth
+- mouth_bleeding
+- diff_speaking
+- voice_change
+- red_white_patches_lining
+- lip_or_sore
+- red_white_patches
+- growth_or_lump
+- ear_pain
+- mouth_pain
+- dysphagia
+- mouth_bleeding_or_numbness
+- jaw_movement
+- erode_areas
+- tongue_movement
+- bad_breath
+- tooth_socket
+slots:
+  back_lump:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: back_lump
+      conditions:
+      - active_loop: Kidney_form
+  urine_blood:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: urine_blood
+      conditions:
+      - active_loop: Kidney_form
+  back_pain:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: back_pain
+      conditions:
+      - active_loop: Kidney_form
+  kidney_appetite_loss:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: kidney_appetite_loss
+      conditions:
+      - active_loop: Kidney_form
+  kidney_weight_loss:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: kidney_weight_loss
+      conditions:
+      - active_loop: Kidney_form
+  kidney_tiredness:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: kidney_tiredness
+      conditions:
+      - active_loop: Kidney_form
+  kidney_fever:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: kidney_fever
+      conditions:
+      - active_loop: Kidney_form
+  dark_pee:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: dark_pee
+      conditions:
+      - active_loop: Kidney_form
+  Kidney_blood_pressure:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: Kidney_blood_pressure
+      conditions:
+      - active_loop: Kidney_form
+  Kidney_high_temp:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: Kidney_high_temp
+      conditions:
+      - active_loop: Kidney_form
+  testicles_viens:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: testicles_viens
+      conditions:
+      - active_loop: Kidney_form
+  swollen_glands:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: swollen_glands
+      conditions:
+      - active_loop: Kidney_form
+  Kidney_bone_pain:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: Kidney_bone_pain
+      conditions:
+      - active_loop: Kidney_form
+  Kidney_fatigue:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: Kidney_fatigue
+      conditions:
+      - active_loop: Kidney_form
+  testicle_swelling:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: testicle_swelling
+      conditions:
+      - active_loop: Kidney_form
+  leg_swelling:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: leg_swelling
+      conditions:
+      - active_loop: Kidney_form
+  Kidney_anemia:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: Kidney_anemia
+      conditions:
+      - active_loop: Kidney_form
+  breast_lump:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: breast_lump
+      conditions:
+      - active_loop: Breast_form
+  breast_skin:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: breast_skin
+      conditions:
+      - active_loop: Breast_form
+  thick_or_swell:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: thick_or_swell
+      conditions:
+      - active_loop: Breast_form
+  irritaion_dimpling:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: irritaion_dimpling
+      conditions:
+      - active_loop: Breast_form
+  Redness_skin:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: Redness_skin
+      conditions:
+      - active_loop: Breast_form
+  alternation_in_appearance:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: alternation_in_appearance
+      conditions:
+      - active_loop: Breast_form
+  breast_pain:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: breast_pain
+      conditions:
+      - active_loop: Breast_form
+  nipple_discharge:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: nipple_discharge
+      conditions:
+      - active_loop: Breast_form
+  Dimpling:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: Dimpling
+      conditions:
+      - active_loop: Breast_form
+  Nipple_retraction:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: Nipple_retraction
+      conditions:
+      - active_loop: Breast_form
+  swollen_lumph_nodes:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: swollen_lumph_nodes
+      conditions:
+      - active_loop: Breast_form
+  Growing_veins:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: Growing_veins
+      conditions:
+      - active_loop: Breast_form
+  Sunken_nipple:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: Sunken_nipple
+      conditions:
+      - active_loop: Breast_form
+  headache_symptoms:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: headache_symptoms
+      conditions:
+      - active_loop: Brain_form
+  seizures_symptoms:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: seizures_symptoms
+      conditions:
+      - active_loop: Brain_form
+  vomit_symptoms:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: vomit_symptoms
+      conditions:
+      - active_loop: Brain_form
+  mental_symtoms:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: mental_symtoms
+      conditions:
+      - active_loop: Brain_form
+  vision_speech_symtoms:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: vision_speech_symtoms
+      conditions:
+      - active_loop: Brain_form
+  coughing:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: coughing
+      conditions:
+      - active_loop: Lung_form
+  chest_pain:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: chest_pain
+      conditions:
+      - active_loop: Lung_form
+  shortness_breath:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: shortness_breath
+      conditions:
+      - active_loop: Lung_form
+  wheezing:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: wheezing
+      conditions:
+      - active_loop: Lung_form
+  coughing_blood:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: coughing_blood
+      conditions:
+      - active_loop: Lung_form
+  feel_tired:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: feel_tired
+      conditions:
+      - active_loop: Lung_form
+  lung_weight_loss:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: lung_weight_loss
+      conditions:
+      - active_loop: Lung_form
+  pneumonia:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: pneumonia
+      conditions:
+      - active_loop: Lung_form
+  lung_high_temp:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: lung_high_temp
+      conditions:
+      - active_loop: Lung_form
+  ache:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: ache
+      conditions:
+      - active_loop: Lung_form
+  muscle_ache:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: muscle_ache
+      conditions:
+      - active_loop: Lung_form
+  change_appearance:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: change_appearance
+      conditions:
+      - active_loop: Lung_form
+  swallowing:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: swallowing
+      conditions:
+      - active_loop: Lung_form
+  swelling_face_neck:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: swelling_face_neck
+      conditions:
+      - active_loop: Lung_form
+  lung_loss_appetite:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: lung_loss_appetite
+      conditions:
+      - active_loop: Lung_form
+  lung_bone_pain:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: lung_bone_pain
+      conditions:
+      - active_loop: Lung_form
+  yellow_skin:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: yellow_skin
+      conditions:
+      - active_loop: Lung_form
+  yellow_eyes:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: yellow_eyes
+      conditions:
+      - active_loop: Lung_form
+  weakness_arm_leg:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: weakness_arm_leg
+      conditions:
+      - active_loop: Lung_form
+  arm_leg_numbness:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: arm_leg_numbness
+      conditions:
+      - active_loop: Lung_form
+  dizziness:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: dizziness
+      conditions:
+      - active_loop: Lung_form
+  mouth_dryness:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: mouth_dryness
+      conditions:
+      - active_loop: Lung_form
+  mouth_ulcers:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: mouth_ulcers
+      conditions:
+      - active_loop: Oral_form
+  mouth_weight_loss:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: mouth_weight_loss
+      conditions:
+      - active_loop: Oral_form
+  loose_teeth:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: loose_teeth
+      conditions:
+      - active_loop: Oral_form
+  mouth_bleeding:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: mouth_bleeding
+      conditions:
+      - active_loop: Oral_form
+  diff_swallowing:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: diff_swallowing
+      conditions:
+      - active_loop: Oral_form
+  diff_speaking:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: diff_speaking
+      conditions:
+      - active_loop: Oral_form
+  voice_change:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: voice_change
+      conditions:
+      - active_loop: Oral_form
+  red_white_patches_lining:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: red_white_patches_lining
+      conditions:
+      - active_loop: Oral_form
+  lip_or_sore:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: lip_or_sore
+      conditions:
+      - active_loop: Oral_form
+  red_white_patches:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: red_white_patches
+      conditions:
+      - active_loop: Oral_form
+  growth_or_lump:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: growth_or_lump
+      conditions:
+      - active_loop: Oral_form
+  ear_pain:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: ear_pain
+      conditions:
+      - active_loop: Oral_form
+  mouth_pain:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: mouth_pain
+      conditions:
+      - active_loop: Oral_form
+  dysphagia:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: dysphagia
+      conditions:
+      - active_loop: Oral_form
+  mouth_bleeding_or_numbness:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: mouth_bleeding_or_numbness
+      conditions:
+      - active_loop: Oral_form
+  jaw_movement:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: jaw_movement
+      conditions:
+      - active_loop: Oral_form
+  erode_areas:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: erode_areas
+      conditions:
+      - active_loop: Oral_form
+  tongue_movement:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: tongue_movement
+      conditions:
+      - active_loop: Oral_form
+  Leukoplakia:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: Leukoplakia
+      conditions:
+      - active_loop: Oral_form
+  Erythroplakia:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: Erythroplakia
+      conditions:
+      - active_loop: Oral_form
+  bad_breath:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: bad_breath
+      conditions:
+      - active_loop: Oral_form
+  stifness:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: stifness
+      conditions:
+      - active_loop: Oral_form
+  tooth_socket:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: tooth_socket
+      conditions:
+      - active_loop: Oral_form
+forms:
+  Brain_form:
+    required_slots:
+    - headache_symptoms
+    - seizures_symptoms
+    - vomit_symptoms
+    - mental_symtoms
+    - vision_speech_symtoms
+  Lung_form:
+    required_slots:
+    - coughing
+    - chest_pain
+    - shortness_breath
+    - wheezing
+    - coughing_blood
+    - feel_tired
+    - lung_weight_loss
+    - pneumonia
+    - lung_high_temp
+    - ache
+    - muscle_ache
+    - change_appearance
+    - swallowing
+    - swelling_face_neck
+    - lung_loss_appetite
+    - lung_bone_pain
+    - yellow_skin
+    - yellow_eyes
+    - weakness_arm_leg
+    - arm_leg_numbness
+    - dizziness
+    - mouth_dryness
+  Breast_form:
+    required_slots:
+    - breast_lump
+    - breast_skin
+    - thick_or_swell
+    - irritaion_dimpling
+    - Redness_skin
+    - alternation_in_appearance
+    - breast_pain
+    - nipple_discharge
+    - Dimpling
+    - Nipple_retraction
+    - swollen_lumph_nodes
+    - Growing_veins
+    - Sunken_nipple
+  Kidney_form:
+    required_slots:
+    - back_lump
+    - urine_blood
+    - back_pain
+    - kidney_appetite_loss
+    - kidney_weight_loss
+    - kidney_tiredness
+    - kidney_fever
+    - dark_pee
+    - Kidney_blood_pressure
+    - Kidney_high_temp
+    - testicles_viens
+    - swollen_glands
+    - Kidney_bone_pain
+    - Kidney_fatigue
+    - testicle_swelling
+    - leg_swelling
+    - Kidney_anemia
+  Oral_form:
+    required_slots:
+    - mouth_ulcers
+    - mouth_weight_loss
+    - loose_teeth
+    - mouth_bleeding
+    - diff_swallowing
+    - diff_speaking
+    - voice_change
+    - red_white_patches_lining
+    - lip_or_sore
+    - red_white_patches
+    - growth_or_lump
+    - ear_pain
+    - mouth_pain
+    - dysphagia
+    - mouth_bleeding_or_numbness
+    - jaw_movement
+    - erode_areas
+    - tongue_movement
+    - Leukoplakia
+    - Erythroplakia
+    - bad_breath
+    - stifness
+    - tooth_socket
+responses:
+  utter_greet:
+  - text: Hi, I am Estshara Chatbot. How can I help you?
+  utter_whatwrong:
+  - text: What seems to be the problem?
+  utter_opinion:
+  - text: As an AI language model, I don't have personal opinions or beliefs.
+  utter_medical_opinion:
+  - text: i can't give a medical opinion, you have to consult a doctor.
+  utter_tell_more:
+  - text: Thank you for letting me know about your symptoms. Is there anything else you're experiencing that you haven't mentioned yet? It's important to provide as much detail as possible so that I can provide you with the most accurate information and guidance.
+  utter_bodypart:
+  - text: In which part of your body do you have pain?
+  utter_closeopenQuestions:
+  - text: Would you like to talk more details about your symptoms or let me ask you questions ?
+  utter_xray:
+  - text: It seems that you have some problems. Do you have an MRI image or X-ray image on your brain?
+  utter_xrayConfirm:
+  - text: Please upload the image here to pass it to our model to check if there is brain disease or not, as it will help the doctor in further stages.
+  utter_thanksforanswering:
+  - text: The Report will be Generated as soon as possible, Any questions?
+  utter_denyxray:
+  - text: Having the image will help the doctors to be more accurate about the disease
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_about_me:
+  - text: Thank you for showing interest in me. I am a chatbot designed to assist you with various tasks and answer your questions to the best of my abilities, My ultimate goal is to provide you with a seamless and satisfying experience.
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_askaboutseizures:
+  - text: Do you have seizures?
+  utter_thatsgood:
+  - text: Great informations, I will ask you some more questions.
+  utter_ask_headache_symptoms:
+  - text: Do you have headache ?
+  utter_ask_seizures_symptoms:
+  - text: Do you feel seizures ?
+  utter_ask_vomit_symptoms:
+  - text: Do you persistently feel sick (nausea), being sick (vomiting) and drowsiness ?
+  utter_ask_mental_symtoms:
+  - text: Do you feel mental or behavioral changes, such as memory problems or changes in personality ?
+  utter_ask_vision_speech_symtoms:
+  - text: Do you have vision or speech problems ?
+  utter_all_slots:
+  - text: 'Here are your slot values: {headache_symptoms},{seizures_symptoms},{vomit_symptoms},{mental_symtoms},{vision_speech_symtoms}.'
+  utter_no_fav:
+  - text: I'm sorry, I'am only a chatbot, i don't an opinion on things?
+  utter_out_of_scope:
+  - text: I apologize, but I'm not able to assist you with that question as it falls outside of my area of expertise. Is there anything else I can help you with that is related to my capabilities?
+  utter_ask_coughing:
+  - text: do you have a persistent cough?
+  utter_ask_chest_pain:
+  - text: do you have pain in your chest?
+  utter_ask_lung_bone_pain:
+  - text: do you have pain in your bones?
+  utter_ask_shortness_breath:
+  - text: have you experienced any persistent shortness of breath?
+  utter_ask_wheezing:
+  - text: Have you noticed any changes in your voice?
+  utter_ask_coughing_blood:
+  - text: Have you occurred coughing blood before?
+  utter_ask_feel_tired:
+  - text: do you feel tired most of the time?
+  utter_ask_lung_weight_loss:
+  - text: Do you have unexplained weight loss?
+  utter_ask_pneumonia:
+  - text: do you feel any inflammation in your chest or any swelling?
+  utter_ask_lung_high_temp:
+  - text: do you have high temperature?
+  utter_ask_muscle_ache:
+  - text: do you have any ache in your muscles?
+  utter_ask_ache:
+  - text: do you have any ache in your head?
+  utter_ask_change_appearance:
+  - text: have you noticed any changes in yor fingers shape?
+  utter_ask_swallowing:
+  - text: are you suffering from diffcuilty swallowing?
+  utter_ask_swelling_face_neck:
+  - text: have you noticed swelling of your face or neck?
+  utter_ask_yellowing_skin:
+  - text: have you noticed yellowing of your skin or eyes?
+  utter_ask_weakness_arm_leg:
+  - text: are you suffering from any weakness of your arm or leg?
+  utter_ask_dizziness:
+  - text: are you suffering from dizziness?
+  utter_ask_mouth_dryness:
+  - text: do you have mouth dryness?
+  utter_ask_lung_loss_appetite:
+  - text: Have you noticed any unexplained loss of appetite?
+  utter_ask_dry_mouth:
+  - text: are you suffering from dry mouth?
+  utter_ask_yellow_skin:
+  - text: do you notice yellowing of your skin?
+  utter_ask_yellow_eyes:
+  - text: do you notice yellowing of your eyes?
+  utter_ask_arm_leg_numbness:
+  - text: do you feel weakness or numbness of your arm or leg?
+  utter_ask_thick_or_swell:
+  - text: Do you have Thickening or swelling of part of the breast?
+  utter_ask_Nipple_retraction:
+  - text: Do you have Nipple retraction?
+  utter_ask_Sunken_nipple:
+  - text: Do you have Sunken nipple?
+  utter_ask_Dimpling:
+  - text: Do you have Dimpling of the breast skin?
+  utter_ask_Growing_veins:
+  - text: Do you notice any Growing veins on the breast?
+  utter_ask_breast_pain:
+  - text: Do you feel breast pain?
+  utter_ask_alternation_in_appearance:
+  - text: Do you have any alteration in size, shape or appearance of a breast?
+  utter_ask_swollen_lumph_nodes:
+  - text: Do you have swollen lymph nodes under the arm or near the collar bone?
+  utter_ask_Redness_skin:
+  - text: Do you have Redness or flaky skin in the nipple area or the breast?
+  utter_ask_irritaion_dimpling:
+  - text: Do you have Irritation or dimpling of breast skin?
+  utter_ask_nipple_discharge:
+  - text: Do you have abnormal nipple discharge?
+  utter_ask_breast_lump:
+  - text: do you notice any lumps in breast or underarm?
+  utter_ask_breast_skin:
+  - text: do you notice any crusting in breast skin or area surrounding nipple?
+  utter_ask_urine_blood:
+  - text: do you see/notice/have blood in your urine?
+  utter_ask_kidney_fever:
+  - text: do you have fever?
+  utter_ask_kidney_tiredness:
+  - text: do you feel tired?
+  utter_ask_kidney_appetite_loss:
+  - text: do you have a loss of appetite?
+  utter_ask_Kidney_high_temp:
+  - text: do have high temperature?
+  utter_ask_Kidney_fatigue:
+  - text: do you have fatigue?
+  utter_ask_Kidney_bone_pain:
+  - text: do you feel pain in bone?
+  utter_ask_Kidney_anemia:
+  - text: do you have anemia?
+  utter_ask_testicle_swelling:
+  - text: do you have swelling in testicle?
+  utter_ask_blood_pressure:
+  - text: do have high blood pressure?
+  utter_ask_leg_swelling:
+  - text: do you feel swelling of legs or ankels?
+  utter_ask_kidney_weight_loss:
+  - text: do you recently experinced unexplained weight loss?
+  utter_ask_back_pain:
+  - text: do you have pain in your back that doesn't go away?
+  utter_ask_dark_pee:
+  - text: does your pee look darker than usual or reddish in colour?
+  utter_ask_testicles_viens:
+  - text: do have swelling of the veins in the testicles?
+  utter_ask_swollen_glands:
+  - text: do you have swollen glands in your neck?
+  utter_ask_back_lump:
+  - text: do you notice any lumps in your lower back or side?
+  utter_ask_loose_teeth:
+  - text: does your teeth fall or do you loose teeth?
+  utter_ask_ear_pain:
+  - text: do you have pain in your ear?
+  utter_ask_mouth_pain:
+  - text: do you have pain in your mouth?
+  utter_ask_lip_or_sore:
+  - text: do you have a lip or mouth sore that doesn't heal?
+  utter_ask_growth_or_lump:
+  - text: do you have a growth or lump inside your mouth?
+  utter_ask_dysphagia:
+  - text: do you have dysphagia?
+  utter_ask_mouth_bleeding_or_numbness:
+  - text: do you have bleeding or numbness in the mouth?
+  utter_ask_tooth_socket:
+  - text: do you have a tooth socket that does not heal after a tooth is removed?
+  utter_ask_Leukoplakia:
+  - text: do you have Leukoplakia?
+  utter_ask_Erythroplakia:
+  - text: do you have Erythroplakia?
+  utter_ask_bad_breath:
+  - text: do you feel like having Chronic bad breath?
+  utter_ask_stifness:
+  - text: do you feel stiffness in your mouth?
+  utter_ask_tongue_movement:
+  - text: do you feel difficulty in moving your tongue?
+  utter_ask_erode_areas:
+  - text: do you have an eroded areas on the lips, gums, cheek, or other areas inside the mouth?
+  utter_ask_red_white_patches:
+  - text: do you have a white or reddish patch on the inside of your mouth ?
+  utter_ask_jaw_movement:
+  - text: do have difficulty moving your jaw ?
+  utter_ask_mouth_ulcers:
+  - text: are you suffering from long term ulcers in your mouth?
+  utter_ask_mouth_weight_loss:
+  - text: have you noticed unexplained weight loss?
+  utter_ask_mouth_bleeding:
+  - text: have you noticed any bleeding from your mouth?
+  utter_ask_diff_swallowing:
+  - text: are you suffering from difficulty of chewing or swallowing?
+  utter_ask_diff_speaking:
+  - text: are you suffering from difficulty of speaking?
+  utter_ask_voice_change:
+  - text: have you noticed any change in your voice?
+  utter_ask_red_white_patches_lining:
+  - text: do you have a white or reddish patch lining of your mouth?
+  utter_how_to_use_me:
+  - text: Sure, I'd be happy to help explain how to use me as a medical chatbot. Here are the steps, Start by typing in your symptoms or concerns . For example, you could say "I have a headache" .I'll then ask you a series of questions to help narrow down your symptoms.
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+actions:
+- utter_closeopenQuestions
+- custom_action
+- Action_yes_no_oral
+- utter_greet
+- action_previous_intents
+- Action_yes_no_brain
+- utter_xray
+- xrayAnswer
+- utter_goodbye
+- utter_bodypart
+- utter_thanksforanswering
+- Action_yes_no_Lung
+- Action_yes_no_breast
+- utter_out_of_scope
+- Action_yes_no_kidney
+- utter_whatwrong
+- utter_xrayConfirm
+- utter_ask_seizures_symptoms
+- utter_ask_vomit_symptoms
+- utter_ask_mental_symtoms
+- utter_ask_vision_speech_symtoms
+- utter_ask_headache_symptoms
+- Im_Fine_action
+- action_save_conversation
+- action_based_on_second_intent

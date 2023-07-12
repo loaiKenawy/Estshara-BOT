@@ -1,0 +1,656 @@
+version: "3.1"
+
+stories:
+
+
+
+
+
+##########################################################################
+
+############################################
+
+- story: brain_aff_deny
+  steps:
+  - intent: symptomsForBrainCancer
+    entities:
+    - headache_symptoms: headache and
+    - vomit_symptoms: vomit
+  - action: Brain_form
+  - active_loop: Brain_form
+  - slot_was_set:
+    - headache_symptoms: headache and
+  - slot_was_set:
+    - vomit_symptoms: vomit
+  - slot_was_set:
+    - requested_slot: seizures_symptoms
+  - intent: affirm
+  - action: Action_yes_no_brain
+  - slot_was_set:
+    - seizures_symptoms: seizures
+  - action: Brain_form
+  - slot_was_set:
+    - requested_slot: mental_symtoms
+  - intent: affirm
+  - action: Action_yes_no_brain
+  - slot_was_set:
+    - mental_symtoms: mental
+  - action: Brain_form
+  - slot_was_set:
+    - requested_slot: vision_speech_symtoms
+  - intent: deny
+  - action: Action_yes_no_brain
+  - slot_was_set:
+    - vision_speech_symtoms: NO ,vision
+  - action: Brain_form
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_xray
+  - intent: deny
+  - action: xrayAnswer
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+##########################################
+
+- story: breast_aff_deny
+  steps:
+  - intent: symptomsForBreastCancer
+    entities:
+    - breast_pain: breast pain
+  - action: Breast_form
+  - active_loop: Breast_form
+  - slot_was_set:
+    - breast_pain: breast pain
+  - slot_was_set:
+    - requested_slot: breast_lump
+  - intent: affirm
+  - action: Action_yes_no_breast
+  - slot_was_set:
+    - breast_lump: New lump in the breast or underarm
+  - action: Breast_form
+  - slot_was_set:
+    - requested_slot: breast_skin
+  - intent: deny
+  - action: Action_yes_no_breast
+  - slot_was_set:
+    - breast_skin: NO ,Peeling, scaling, crusting or flaking of the pigmented area of skin surrounding the nipple or breast skin
+  - action: Breast_form
+  - slot_was_set:
+    - requested_slot: thick_or_swell
+  - intent: affirm
+  - action: Action_yes_no_breast
+  - slot_was_set:
+    - thick_or_swell: Thickening and swelling of part of the breast
+  - action: Breast_form
+  - slot_was_set:
+    - requested_slot: irritaion_dimpling
+  - intent: deny
+  - action: Action_yes_no_breast
+  - slot_was_set:
+    - irritaion_dimpling: NO ,irritation of breast skin
+  - action: Breast_form
+  - slot_was_set:
+    - requested_slot: Redness_skin
+  - intent: affirm
+  - action: Action_yes_no_breast
+  - slot_was_set:
+    - Redness_skin: Redness skin in the breast or in nipple area
+  - action: Breast_form
+  - slot_was_set:
+    - requested_slot: alternation_in_appearance
+  - intent: deny
+  - action: Action_yes_no_breast
+  - slot_was_set:
+    - alternation_in_appearance: NO ,alteration in appearance of a breast
+  - action: Breast_form
+  - slot_was_set:
+    - requested_slot: nipple_discharge
+  - intent: affirm
+  - action: Action_yes_no_breast
+  - slot_was_set:
+    - nipple_discharge: abnormal nipple discharge
+  - action: Breast_form
+  - slot_was_set:
+    - requested_slot: Dimpling
+  - intent: affirm
+  - action: Action_yes_no_breast
+  - slot_was_set:
+    - Dimpling: Dimpling of the breast skin
+  - action: Breast_form
+  - slot_was_set:
+    - requested_slot: Nipple_retraction
+  - intent: affirm
+  - action: Action_yes_no_breast
+  - slot_was_set:
+    - Nipple_retraction: Nipple retraction
+  - action: Breast_form
+  - slot_was_set:
+    - requested_slot: swollen_lumph_nodes
+  - intent: affirm
+  - action: Action_yes_no_breast
+  - slot_was_set:
+    - swollen_lumph_nodes: Swollen lymph nodes near the collar bone or under the arm
+  - action: Breast_form
+  - slot_was_set:
+    - requested_slot: Growing_veins
+  - intent: affirm
+  - action: Action_yes_no_breast
+  - slot_was_set:
+    - Growing_veins: Growing veins on the breast
+  - action: Breast_form
+  - slot_was_set:
+    - requested_slot: Sunken_nipple
+  - intent: affirm
+  - action: Action_yes_no_breast
+  - slot_was_set:
+    - Sunken_nipple: Sunken nipple
+  - action: Breast_form
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_xray
+  - intent: deny
+  - action: utter_thanksforanswering
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+####################################################
+
+- story: Oral_aff_deny
+  steps:
+  - intent: symptomsForOralCancer
+    entities:
+    - Leukoplakia: Leukoplakia and
+    - Erythroplakia: Erythroplakia and
+    - stifness: stiffness
+  - action: Oral_form
+  - active_loop: Oral_form
+  - slot_was_set:
+    - Leukoplakia: Leukoplakia and
+  - slot_was_set:
+    - Erythroplakia: Erythroplakia and
+  - slot_was_set:
+    - stifness: stiffness
+  - slot_was_set:
+    - requested_slot: mouth_ulcers
+  - intent: affirm
+  - action: Action_yes_no_oral
+  - slot_was_set:
+    - mouth_ulcers: sore mouth ulcers that do not heal within several weeks
+  - action: Oral_form
+  - slot_was_set:
+    - requested_slot: mouth_weight_loss
+  - intent: deny
+  - action: Action_yes_no_oral
+  - slot_was_set:
+    - mouth_weight_loss: NO ,unintentional weight loss
+  - action: Oral_form
+  - slot_was_set:
+    - requested_slot: loose_teeth
+  - intent: affirm
+  - action: Action_yes_no_oral
+  - slot_was_set:
+    - loose_teeth: Loose teeth
+  - action: Oral_form
+  - slot_was_set:
+    - requested_slot: mouth_bleeding
+  - intent: deny
+  - action: Action_yes_no_oral
+  - slot_was_set:
+    - mouth_bleeding: NO ,bleeding in the mouth
+  - action: Oral_form
+  - slot_was_set:
+    - requested_slot: diff_swallowing
+  - intent: deny
+  - action: Action_yes_no_oral
+  - slot_was_set:
+    - diff_swallowing: NO ,Difficulty swallowing or chewing
+  - action: Oral_form
+  - slot_was_set:
+    - requested_slot: diff_speaking
+  - intent: affirm
+  - action: Action_yes_no_oral
+  - slot_was_set:
+    - diff_speaking: Difficulty speaking
+  - action: Oral_form
+  - slot_was_set:
+    - requested_slot: voice_change
+  - intent: deny
+  - action: Action_yes_no_oral
+  - slot_was_set:
+    - voice_change: NO ,change in voice
+  - action: Oral_form
+  - slot_was_set:
+    - requested_slot: red_white_patches_lining
+  - intent: affirm
+  - action: Action_yes_no_oral
+  - slot_was_set:
+    - red_white_patches_lining: red or white patches on the lining of your mouth
+  - action: Oral_form
+  - slot_was_set:
+    - requested_slot: lip_or_sore
+  - intent: affirm
+  - action: Action_yes_no_oral
+  - slot_was_set:
+    - lip_or_sore: A lip or Mouth sore that doesn't heal
+  - action: Oral_form
+  - slot_was_set:
+    - requested_slot: red_white_patches
+  - intent: deny
+  - action: Action_yes_no_oral
+  - slot_was_set:
+    - red_white_patches: NO ,red or white patches on the inside of your mouth
+  - action: Oral_form
+  - slot_was_set:
+    - requested_slot: growth_or_lump
+  - intent: deny
+  - action: Action_yes_no_oral
+  - slot_was_set:
+    - growth_or_lump: NO ,A lump or growth inside the mouth
+  - action: Oral_form
+  - slot_was_set:
+    - requested_slot: ear_pain
+  - intent: deny
+  - action: Action_yes_no_oral
+  - slot_was_set:
+    - ear_pain: NO ,ear pain
+  - action: Oral_form
+  - slot_was_set:
+    - requested_slot: mouth_pain
+  - intent: affirm
+  - action: Action_yes_no_oral
+  - slot_was_set:
+    - mouth_pain: mouth pain
+  - action: Oral_form
+  - slot_was_set:
+    - requested_slot: dysphagia
+  - intent: affirm
+  - action: Action_yes_no_oral
+  - slot_was_set:
+    - dysphagia: dysphagia
+  - action: Oral_form
+  - slot_was_set:
+    - requested_slot: mouth_bleeding_or_numbness
+  - intent: deny
+  - action: Action_yes_no_oral
+  - slot_was_set:
+    - mouth_bleeding_or_numbness: NO ,bleeding or numbness in the mouth
+  - action: Oral_form
+  - slot_was_set:
+    - requested_slot: jaw_movement
+  - intent: affirm
+  - action: Action_yes_no_oral
+  - slot_was_set:
+    - jaw_movement: difficulty moving the jaw
+  - action: Oral_form
+  - slot_was_set:
+    - requested_slot: erode_areas
+  - intent: deny
+  - action: Action_yes_no_oral
+  - slot_was_set:
+    - erode_areas: NO ,eroded areas on the lips, gums, cheek, or other areas inside the mouth
+  - action: Oral_form
+  - slot_was_set:
+    - requested_slot: tongue_movement
+  - intent: deny
+  - action: Action_yes_no_oral
+  - slot_was_set:
+    - tongue_movement: NO ,Difficulty in tongue movement
+  - action: Oral_form
+  - slot_was_set:
+    - requested_slot: bad_breath
+  - intent: deny
+  - action: Action_yes_no_oral
+  - slot_was_set:
+    - bad_breath: NO ,Chronic bad breath
+  - action: Oral_form
+  - slot_was_set:
+    - requested_slot: tooth_socket
+  - intent: deny
+  - action: Action_yes_no_oral
+  - slot_was_set:
+    - tooth_socket: NO ,a tooth socket that does not heal after a tooth is removed
+  - action: Oral_form
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_xray
+  - intent: deny
+  - action: utter_thanksforanswering
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+
+
+- story: lung_aff_deny
+  steps:
+  - intent: symptomsForLungCancer
+    entities:
+    - chest_pain: Chest Pain
+    - feel_tired: Feel Tired All The Time
+    - pneumonia: pneumonia
+    - dizziness: Dizziness
+    - mouth_dryness: Dry Mouth
+    - lung_loss_appetite: Loss Of Appetite
+    - swelling_face_neck: Swelling of Face
+    - diff_swallowing: difficulty swallowing
+    - shortness_breath: Shortness Of Breath
+    - wheezing: Wheezing
+    - coughing_blood: Coughing UP Blood
+    - muscle_ache: Muscles Ache
+    - change_appearance: Changes in the appearance of fingers shapes
+    - arm_leg_numbness: numbness of an arm
+  - action: Lung_form
+  - active_loop: Lung_form
+  - slot_was_set:
+    - chest_pain: Chest Pain
+  - slot_was_set:
+    - shortness_breath: Shortness Of Breath
+  - slot_was_set:
+    - wheezing: Wheezing
+  - slot_was_set:
+    - coughing_blood: Coughing UP Blood
+  - slot_was_set:
+    - feel_tired: Feel Tired All The Time
+  - slot_was_set:
+    - pneumonia: pneumonia
+  - slot_was_set:
+    - muscle_ache: Muscles Ache
+  - slot_was_set:
+    - change_appearance: Changes in the appearance of fingers shapes
+  - slot_was_set:
+    - swelling_face_neck: Swelling of Face
+  - slot_was_set:
+    - lung_loss_appetite: Loss Of Appetite
+  - slot_was_set:
+    - arm_leg_numbness: numbness of an arm
+  - slot_was_set:
+    - dizziness: Dizziness
+  - slot_was_set:
+    - mouth_dryness: Dry Mouth
+  - slot_was_set:
+    - requested_slot: coughing
+  - intent: affirm
+  - action: Action_yes_no_Lung
+  - slot_was_set:
+    - coughing: coughing
+  - action: Lung_form
+  - slot_was_set:
+    - requested_slot: lung_weight_loss
+  - intent: deny
+  - action: Action_yes_no_Lung
+  - slot_was_set:
+    - lung_weight_loss: NO ,Weight Loss
+  - action: Lung_form
+  - slot_was_set:
+    - requested_slot: lung_high_temp
+  - intent: deny
+  - action: Action_yes_no_Lung
+  - slot_was_set:
+    - lung_high_temp: NO ,high temperature
+  - action: Lung_form
+  - slot_was_set:
+    - requested_slot: ache
+  - intent: affirm
+  - action: Action_yes_no_Lung
+  - slot_was_set:
+    - ache: headache
+  - action: Lung_form
+  - slot_was_set:
+    - requested_slot: swallowing
+  - intent: deny
+  - action: Action_yes_no_Lung
+  - slot_was_set:
+    - swallowing: NO ,difficulty swallowing
+  - action: Lung_form
+  - slot_was_set:
+    - requested_slot: lung_bone_pain
+  - intent: deny
+  - action: Action_yes_no_Lung
+  - slot_was_set:
+    - lung_bone_pain: NO ,Bone Pain
+  - action: Lung_form
+  - slot_was_set:
+    - requested_slot: yellow_skin
+  - intent: affirm
+  - action: Action_yes_no_Lung
+  - slot_was_set:
+    - yellow_skin: Yellowing of skin
+  - action: Lung_form
+  - slot_was_set:
+    - requested_slot: yellow_eyes
+  - intent: deny
+  - action: Action_yes_no_Lung
+  - slot_was_set:
+    - yellow_eyes: NO ,Yellowing of eyes
+  - action: Lung_form
+  - slot_was_set:
+    - requested_slot: weakness_arm_leg
+  - intent: deny
+  - action: Action_yes_no_Lung
+  - slot_was_set:
+    - weakness_arm_leg: NO ,weakness of an arm or leg
+  - action: Lung_form
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_xray
+  - intent: deny
+  - action: utter_thanksforanswering
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+
+- story: Brain ask me
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: feelbad
+  - action: utter_closeopenQuestions
+  - intent: chatbotAsk
+  - action: custom_action
+  - intent: placeOfPain_Head
+  - action: action_previous_intents
+  - intent: affirm
+  - action: Action_yes_no_brain
+  - slot_was_set:
+    - seizures_symptoms: seizures
+  - action: Brain_form
+  - active_loop: Brain_form
+  - slot_was_set:
+    - requested_slot: headache_symptoms
+
+- story: Brain explain
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: feelbad
+  - action: utter_closeopenQuestions
+  - intent: chatbotAsk
+  - action: custom_action
+  - intent: placeOfPain_Head
+  - action: action_previous_intents
+  - intent: affirm
+  - action: Action_yes_no_brain
+  - slot_was_set:
+    - seizures_symptoms: seizures
+  - action: Brain_form
+  - active_loop: Brain_form
+  - slot_was_set:
+    - requested_slot: headache_symptoms
+
+
+- story: lung ask me
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: feelbad
+  - action: utter_closeopenQuestions
+  - intent: chatbotAsk
+  - action: custom_action
+  - intent: placeOfPain_Lung
+  - action: action_previous_intents
+  - intent: affirm
+  - action: Action_yes_no_Lung
+  - slot_was_set:
+    - seizures_symptoms: coughing_blood
+  - action: Lung_form
+  - active_loop: Lung_form
+
+
+- story: lung explain
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: feelbad
+  - action: utter_closeopenQuestions
+  - intent: chatbotAsk
+  - action: custom_action
+  - intent: placeOfPain_Lung
+  - action: action_previous_intents
+  - intent: affirm
+  - action: Action_yes_no_Lung
+  - slot_was_set:
+    - seizures_symptoms: coughing_blood
+  - action: Lung_form
+  - active_loop: Lung_form
+
+
+- story: breast ask me
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: feelbad
+  - action: utter_closeopenQuestions
+  - intent: chatbotAsk
+  - action: custom_action
+  - intent: placeOfPain_breast
+  - action: action_previous_intents
+  - intent: affirm
+  - action: Action_yes_no_breast
+  - slot_was_set:
+    - seizures_symptoms: breast_lump
+  - action: Breast_form
+  - active_loop: Breast_form
+
+
+- story: breast explain
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: feelbad
+  - action: utter_closeopenQuestions
+  - intent: chatbotAsk
+  - action: custom_action
+  - intent: placeOfPain_breast
+  - action: action_previous_intents
+  - intent: affirm
+  - action: Action_yes_no_breast
+  - slot_was_set:
+    - seizures_symptoms: breast_lump
+  - action: Breast_form
+  - active_loop: Breast_form
+
+
+- story: kidney ask me
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: feelbad
+  - action: utter_closeopenQuestions
+  - intent: chatbotAsk
+  - action: custom_action
+  - intent: placeOfPain_Kidney
+  - action: action_previous_intents
+  - intent: affirm
+  - action: Action_yes_no_kidney
+  - slot_was_set:
+    - seizures_symptoms: urine_blood
+  - action: Kidney_form
+  - active_loop: Kidney_form
+
+
+- story: kidney explain
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: feelbad
+  - action: utter_closeopenQuestions
+  - intent: chatbotAsk
+  - action: custom_action
+  - intent: placeOfPain_Kidney
+  - action: action_previous_intents
+  - intent: affirm
+  - action: Action_yes_no_kidney
+  - slot_was_set:
+    - seizures_symptoms: urine_blood
+  - action: Kidney_form
+  - active_loop: Kidney_form
+
+
+- story: oral ask me
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: feelbad
+  - action: utter_closeopenQuestions
+  - intent: chatbotAsk
+  - action: custom_action
+  - intent: placeOfPain_oral
+  - action: action_previous_intents
+  - intent: affirm
+  - action: Action_yes_no_oral
+  - slot_was_set:
+    - mouth_ulcers: sore mouth ulcers that do not heal within several weeks
+  - action: Oral_form
+  - active_loop: Oral_form
+  - slot_was_set:
+    - requested_slot: mouth_weight_loss
+  - intent: affirm
+  - action: Action_yes_no_oral
+  - slot_was_set:
+    - mouth_weight_loss: unintentional weight loss
+  - action: Oral_form
+  - slot_was_set:
+    - requested_slot: loose_teeth
+  - intent: deny
+  - action: Action_yes_no_oral
+  - slot_was_set:
+    - loose_teeth: NO ,Loose teeth
+  - action: Action_yes_no_oral
+  - action: Oral_form
+  - slot_was_set:
+    - requested_slot: mouth_bleeding
+
+
+
+- story: oral explain
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: feelbad
+  - action: utter_closeopenQuestions
+  - intent: explain
+  - action: custom_action
+  - intent: symptomsForOralCancer
+    entities:
+    - Erythroplakia: Erythroplakia
+  - action: Oral_form
+  - active_loop: Oral_form
+  - slot_was_set:
+    - Erythroplakia: Erythroplakia
+  - slot_was_set:
+    - requested_slot: mouth_ulcers
+  - intent: affirm
+  - action: Action_yes_no_oral
+  - slot_was_set:
+    - mouth_ulcers: sore mouth ulcers that do not heal within several weeks
+  - action: Oral_form
+  - slot_was_set:
+    - requested_slot: mouth_weight_loss

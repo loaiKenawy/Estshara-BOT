@@ -1,0 +1,42 @@
+[
+  {
+    "text": "Weight Loss",
+    "intent": "symptomsForLungCancer",
+    "intent_prediction": {
+      "name": "symptomsForOralCancer",
+      "confidence": 0.9815426468849182
+    }
+  },
+  {
+    "text": "weight loss",
+    "intent": "symptomsForLungCancer",
+    "intent_prediction": {
+      "name": "symptomsForOralCancer",
+      "confidence": 0.98651123046875
+    }
+  },
+  {
+    "text": "headache",
+    "intent": "symptomsForLungCancer",
+    "intent_prediction": {
+      "name": "symptomsForBrainCancer",
+      "confidence": 0.8941818475723267
+    }
+  },
+  {
+    "text": "difficulty swallowing",
+    "intent": "symptomsForLungCancer",
+    "intent_prediction": {
+      "name": "symptomsForOralCancer",
+      "confidence": 0.9785221219062805
+    }
+  },
+  {
+    "text": "Bone Pain",
+    "intent": "symptomsForLungCancer",
+    "intent_prediction": {
+      "name": "symptomsForKidneyCancer",
+      "confidence": 0.6530774235725403
+    }
+  }
+]

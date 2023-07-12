@@ -1,0 +1,32 @@
+version: "3.1"
+stories:
+- story: interactive_story_1 (.\tests\test_stories.yml)
+  steps:
+  - user: |-
+      - hi
+  - action: action_listen  # predicted: action_default_fallback
+  - intent: greet
+  - action: utter_greet
+  - user: |-
+      - i feel sick for two days
+  - action: action_listen  # predicted: action_previous_intents
+  - intent: feelbad
+  - action: utter_closeopenQuestions
+  - user: |-
+      - ask me
+  - action: action_listen  # predicted: action_default_fallback
+  - intent: chatbotAsk
+  - action: custom_action
+  - intent: placeOfPain_Head
+  - action: action_previous_intents
+  - user: |-
+      - yes
+  - action: action_listen  # predicted: action_previous_intents
+  - intent: affirm
+  - action: Action_yes_no_brain
+  - slot_was_set:
+    - seizures_symptoms: seizures
+  - action: Brain_form
+  - active_loop: Brain_form
+  - slot_was_set:
+    - requested_slot: headache_symptoms

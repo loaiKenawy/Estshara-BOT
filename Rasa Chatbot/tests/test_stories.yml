@@ -1,0 +1,204 @@
+version: "3.1"
+
+stories:
+
+
+
+
+
+##########################################################################
+
+- story: Brain Story
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: feelbad
+  - action: utter_closeopenQuestions
+  - or:
+    - intent: explain
+    - intent: chatbotAsk
+  - action: custom_action
+  - intent: placeOfPain_Head
+  - action: action_previous_intents
+  - checkpoint: different_questions_flow
+  
+- story: Brain User Talk
+  steps:
+  - checkpoint: different_questions_flow
+  - intent: symptomsForBrainCancer
+  - action: Brain_form
+  - active_loop: Brain_form
+  - slot_was_set:
+    - requested_slot: headache_symptoms
+  - slot_was_set:
+    - headache_symptoms: headache
+  - slot_was_set:
+    - requested_slot: seizures_symptoms
+  - slot_was_set:
+    - seizures_symptoms: seizures
+  - slot_was_set:
+    - requested_slot: vomit_symptoms
+  - slot_was_set:
+    - vomit_symptoms: vomit
+  - slot_was_set:
+    - requested_slot: mental_symtoms
+  - slot_was_set:
+    - mental_symtoms: mental
+  - slot_was_set:
+    - requested_slot: vision_speech_symtoms
+  - slot_was_set:
+    - vision_speech_symtoms: vision
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - checkpoint: xray_flow
+
+
+- story: Brain Questions
+  steps:
+  - checkpoint: different_questions_flow
+  - or: 
+    - intent: affirm
+    - intent: deny
+  - action: Action_yes_no_brain
+  - slot_was_set:
+    - seizures_symptoms: seizures
+  - action: Brain_form
+  - active_loop: Brain_form
+  - slot_was_set:
+    - requested_slot: headache_symptoms
+  - or: 
+    - intent: affirm
+    - intent: deny
+  - action: Action_yes_no_brain
+  - slot_was_set:
+    - headache_symptoms: NO ,headache
+  - action: Brain_form
+  - slot_was_set:
+    - requested_slot: vomit_symptoms
+  - or: 
+    - intent: affirm
+    - intent: deny
+  - action: Action_yes_no_brain
+  - slot_was_set:
+    - vomit_symptoms: vomit
+  - action: Brain_form
+  - slot_was_set:
+    - requested_slot: mental_symtoms
+  - or: 
+    - intent: affirm
+    - intent: deny
+  - action: Action_yes_no_brain
+  - slot_was_set:
+    - mental_symtoms: mental
+  - action: Brain_form
+  - slot_was_set:
+    - requested_slot: vision_speech_symtoms
+  - or: 
+    - intent: affirm
+    - intent: deny
+  - action: Action_yes_no_brain
+  - slot_was_set:
+    - vision_speech_symtoms: NO ,vision
+  - action: Brain_form
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - checkpoint: xray_flow
+
+- story: Brain Xray
+  steps:
+  - checkpoint: xray_flow
+  - action: utter_xray
+  - or: 
+    - intent: affirm
+    - intent: deny
+  - action: xrayAnswer
+  - or: 
+    - intent: affirm
+    - intent: deny
+  - action: utter_thanksforanswering
+  - intent: goodbye
+  - action: utter_goodbye
+
+##########################################################################
+
+######################################################
+
+
+############################################
+
+- story: brain_aff_deny
+  steps:
+  - intent: symptomsForBrainCancer
+    entities:
+    - headache_symptoms: headache and
+    - vomit_symptoms: vomit
+  - action: Brain_form
+  - active_loop: Brain_form
+  - slot_was_set:
+    - headache_symptoms: headache and
+  - slot_was_set:
+    - vomit_symptoms: vomit
+  - slot_was_set:
+    - requested_slot: seizures_symptoms
+  - intent: affirm
+  - action: Action_yes_no_brain
+  - slot_was_set:
+    - seizures_symptoms: seizures
+  - action: Brain_form
+  - slot_was_set:
+    - requested_slot: mental_symtoms
+  - intent: affirm
+  - action: Action_yes_no_brain
+  - slot_was_set:
+    - mental_symtoms: mental
+  - action: Brain_form
+  - slot_was_set:
+    - requested_slot: vision_speech_symtoms
+  - intent: deny
+  - action: Action_yes_no_brain
+  - slot_was_set:
+    - vision_speech_symtoms: NO ,vision
+  - action: Brain_form
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_xray
+  - intent: deny
+  - action: xrayAnswer
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+##########################################
+
+- story: interactive_story_1
+  steps:
+  - user: |
+      - hi
+  - intent: greet
+  - action: utter_greet
+  - user: |
+      - i feel sick for two days
+  - intent: feelbad
+  - action: utter_closeopenQuestions
+  - user: |
+      - ask me
+  - intent: chatbotAsk
+  - action: custom_action
+  - intent: placeOfPain_Head
+  - action: action_previous_intents
+  - user: |
+      - yes
+  - intent: affirm
+  - action: Action_yes_no_brain
+  - slot_was_set:
+    - seizures_symptoms: seizures
+  - action: Brain_form
+  - active_loop: Brain_form
+  - slot_was_set:
+    - requested_slot: headache_symptoms
+
+
+

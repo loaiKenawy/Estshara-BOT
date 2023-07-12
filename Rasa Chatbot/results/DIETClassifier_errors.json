@@ -1,0 +1,77 @@
+[
+  {
+    "text": "Peeling of the pigmented area of skin surrounding the nipple",
+    "entities": [
+      {
+        "start": 0,
+        "end": 61,
+        "value": "Peeling of the pigmented area of skin surrounding the nipple ",
+        "entity": "breast_skin"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "weight loss",
+    "entities": [
+      {
+        "start": 0,
+        "end": 11,
+        "value": "weight loss",
+        "entity": "lung_weight_loss"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "mouth_weight_loss",
+        "start": 0,
+        "end": 11,
+        "confidence_entity": 0.5865956544876099,
+        "value": "weight loss",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "headache",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "headache",
+        "entity": "ache"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "headache_symptoms",
+        "start": 0,
+        "end": 8,
+        "confidence_entity": 0.5182170271873474,
+        "value": "headache",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "difficulty swallowing",
+    "entities": [
+      {
+        "start": 0,
+        "end": 21,
+        "value": "difficulty swallowing",
+        "entity": "swallowing"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "diff_swallowing",
+        "start": 0,
+        "end": 21,
+        "confidence_entity": 0.7027183771133423,
+        "value": "difficulty swallowing",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

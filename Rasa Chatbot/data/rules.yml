@@ -1,0 +1,135 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
+
+- rule: reply on fav things
+  steps:
+  - intent: what's your fav
+  - action: utter_no_fav
+
+- rule: how to use me
+  steps:
+  - intent: how_to_use_chatbot
+  - action: utter_how_to_use_me
+
+- rule: reply on out of scope
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+
+- rule: reply on UserWantsToKnowMoreAboutChatbot
+  steps:
+  - intent: UserWantsToKnowMoreAboutChatbot
+  - action: utter_about_me
+
+- rule: reply on opinion
+  steps:
+  - intent: opinion
+  - action: utter_opinion
+
+- rule: reply on medical opinion
+  steps:
+  - intent: medical_opinion
+  - action: utter_medical_opinion
+
+- rule: reply on checkingon
+  steps:
+  - intent: checking on
+  - action: Im_Fine_action
+
+- rule: Activate form
+  steps:
+  - intent: symptomsForBrainCancer
+  - action: Brain_form
+  - active_loop: Brain_form
+
+- rule: Submit form
+  condition:
+  - active_loop: Brain_form
+  steps:
+  - action: Brain_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_xray
+
+######################## Lung Form
+- rule: Activate form
+  steps:
+  - intent: symptomsForLungCancer
+  - action: Lung_form
+  - active_loop: Lung_form
+
+- rule: Submit form
+  condition:
+  - active_loop: Lung_form
+  steps:
+  - action: Lung_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_xray
+
+
+######################## Breast Form
+- rule: Activate form
+  steps:
+  - intent: symptomsForBreastCancer
+  - action: Breast_form
+  - active_loop: Breast_form
+
+- rule: Submit form
+  condition:
+  - active_loop: Breast_form
+  steps:
+  - action: Breast_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_xray
+
+
+######################## Kidney Form
+- rule: Activate form
+  steps:
+  - intent: symptomsForKidneyCancer
+  - action: Kidney_form
+  - active_loop: Kidney_form
+
+- rule: Submit form
+  condition:
+  - active_loop: Kidney_form
+  steps:
+  - action: Kidney_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_xray
+
+
+######################## Oral Form
+- rule: Activate form
+  steps:
+  - intent: symptomsForOralCancer
+  - action: Oral_form
+  - active_loop: Oral_form
+
+- rule: Submit form
+  condition:
+  - active_loop: Oral_form
+  steps:
+  - action: Oral_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_xray
