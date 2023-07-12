@@ -68,11 +68,8 @@ Here are some screenshots showcasing the functionality and user interface of the
 *Result after Upload image*
 
 ![Screenshot 3](/images/reportfinal.png)
-![Screenshot 3](/images/brainreportimage.png)
+![Screenshot 3](/images/breainreportimage.png)
 
 *Report Generated*
 
 
-## Demo
-
-![demo video](/images/Demofinal.mp4)
