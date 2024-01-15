@@ -39,32 +39,31 @@ The following toolkits and technologies have been utilized in the development of
 
 - TensorFlow: TensorFlow is a popular machine learning framework utilized for building and training deep learning models. It has been employed to develop and deploy the image classification models in EstsharaBot.
 
-## Application Screenshots
+- *Application Screenshots*
 
 Here are some screenshots showcasing the functionality and user interface of the EstsharaBot mobile application:
-<p align = "center">
-### Register Page
+
+- *Register Page*
 <img src="/images/register.jpg" width = 400 hight="800"/>
 
-### Login Page
+- *Login Page*
 <img src="/images/login.jpg" width = 400 hight="800"/>
 
-### Home Page
+- *Home Page*
 <img src="/images/homepage.png" width = 400 hight="800"/>
 
-### Chatbot
+- *Chatbot*
 <img src="/images/chatbot.png" width = 400 hight="800"/>
 
-### Upload Image
+- *Upload Image*
 <img src="/images/uploadimage.jpg" width = 400 hight="800"/>
 
-### Result after Upload image
+- *Result after Upload image*
 <img src="/images/afteruploadingimage.jpg" width = 400 hight="800"/>
 
-### Report Generated
+- *Report Generated*
 <img src="/images/reportfinal.png" width = 400 hight="800"/>
 <img src="/images/breainreportimage.png" width = 400 hight="800"/>
-</p>
 
 
 ## Demo
