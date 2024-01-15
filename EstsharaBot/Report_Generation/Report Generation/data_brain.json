@@ -1,0 +1,31 @@
+{
+    "patient": {
+        "name": "Unkown",
+        "age": 23,
+        "gender": "Male"
+    },
+    "medical_history": {
+        "medical_condition_before": "Yes",
+        "medications_or_supplements": "Yes",
+        "Surgeries_or_Hospitalizations": "Yes",
+        "Allergies_to_medications": "Yes",
+        "family_history": "Yes",
+        "Smoking": "Yes",
+        "Drinking_Alcholes": "Yes",
+        "Other": "Yes"
+    },
+    "predicted_form": "Brain",
+    "Brain_form": {
+        "Headache": "Yes",
+        "Seizures": "Yes",
+        "Vomiting_and_Drowsiness": "Yes",
+        "Mental_or_Behavioral_changes": "Yes",
+        "Vision_or_Speech_Problems": "Yes"
+    },
+    "image_model": {
+        "cancer_type": "Brain Cancer",
+        "cancer_accuracy": "87 %",
+        "notes": "Any Additional Notes we want to add"
+    }
+    
+}

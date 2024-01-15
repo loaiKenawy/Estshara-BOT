@@ -1,0 +1,43 @@
+{
+    "patient": {
+        "name": "unknown",
+        "age": 23,
+        "gender": "Male"
+    },
+    "medical_history": {
+        "medical_condition_before": "Yes",
+        "medications_or_supplements": "Yes",
+        "Surgeries_or_Hospitalizations": "Yes",
+        "Allergies_to_medications": "Yes",
+        "family_history": "Yes",
+        "Smoking": "Yes",
+        "Drinking_Alcholes": "Yes",
+        "Other": "Yes"
+    },
+    "predicted_form": "Kidney",
+    "Kidney_form": {
+        "back_lump" : "Yes",
+        "urine_blood" : "Yes",
+        "back_pain" : "Yes",
+        "kidney_appetite_loss" : "Yes",
+        "kidney_weight_loss" : "Yes",
+        "kidney_tiredness" : "Yes",
+        "kidney_fever" : "Yes",
+        "dark_pee" : "Yes",
+        "Kidney_blood_pressure" : "Yes",
+        "Kidney_high_temp" : "Yes",
+        "testicles_viens" : "Yes",
+        "swollen_glands" : "Yes",
+        "Kidney_bone_pain" : "Yes",
+        "Kidney_fatigue" : "Yes",
+        "testicle_swelling" : "Yes",
+        "leg_swelling" : "Yes",
+        "Kidney_anemia" : "Yes"
+    },
+    "image_model": {
+        "cancer_type": "Kidney Cancer",
+        "cancer_accuracy": "87 %",
+        "notes": "Any Additional Notes "
+    }
+    
+}
