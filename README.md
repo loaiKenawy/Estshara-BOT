@@ -43,11 +43,12 @@ The following toolkits and technologies have been utilized in the development of
 
 Here are some screenshots showcasing the functionality and user interface of the EstsharaBot mobile application:
 <p align = "center">
+  
 ![Screenshot 1](/images/register.jpg)
 
 *Register Page*
 
-![Screenshot 1](/images/login.jpg)
+![Screenshot 2](/images/login.jpg)
 
 *Login Page*
 
