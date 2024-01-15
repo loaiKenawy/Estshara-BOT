@@ -42,10 +42,10 @@ The following toolkits and technologies have been utilized in the development of
 ## Application Screenshots
 
 Here are some screenshots showcasing the functionality and user interface of the EstsharaBot mobile application:
-<p align = "center">
-  
-![Screenshot 1](/images/register.jpg)
 
+  
+
+<img src="/images/register.jpg" width = 400 hight="800"/>
 *Register Page*
 
 ![Screenshot 2](/images/login.jpg)
@@ -72,7 +72,6 @@ Here are some screenshots showcasing the functionality and user interface of the
 ![Screenshot 3](/images/breainreportimage.png)
 
 *Report Generated*
-</p>
 
 ## Demo
 
