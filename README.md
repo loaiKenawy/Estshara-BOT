@@ -42,38 +42,32 @@ The following toolkits and technologies have been utilized in the development of
 ## Application Screenshots
 
 Here are some screenshots showcasing the functionality and user interface of the EstsharaBot mobile application:
-
-  
-
+<p align = "center">
+### Register Page
 <img src="/images/register.jpg" width = 400 hight="800"/>
-*Register Page*
 
-
+### Login Page
 <img src="/images/login.jpg" width = 400 hight="800"/>
-*Login Page*
 
+### Home Page
 <img src="/images/homepage.png" width = 400 hight="800"/>
-*Home Page*
 
-
+### Chatbot
 <img src="/images/chatbot.png" width = 400 hight="800"/>
-*Chatbot*
 
+### Upload Image
 <img src="/images/uploadimage.jpg" width = 400 hight="800"/>
-*Upload Image*
 
+### Result after Upload image
 <img src="/images/afteruploadingimage.jpg" width = 400 hight="800"/>
 
-*Result after Upload image*
+### Report Generated
 <img src="/images/reportfinal.png" width = 400 hight="800"/>
 <img src="/images/breainreportimage.png" width = 400 hight="800"/>
+</p>
 
-*Report Generated*
 
 ## Demo
-
-
-
 https://github.com/ZyadMohamed1/EstsharaBOT/assets/53688189/d35666b6-6cdb-42b6-b671-a01a1bffe60a
 
 
