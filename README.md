@@ -48,28 +48,25 @@ Here are some screenshots showcasing the functionality and user interface of the
 <img src="/images/register.jpg" width = 400 hight="800"/>
 *Register Page*
 
-![Screenshot 2](/images/login.jpg)
 
+<img src="/images/login.jpg" width = 400 hight="800"/>
 *Login Page*
 
-![Screenshot 3](/images/homepage.png)
-
+<img src="/images/homepage.png" width = 400 hight="800"/>
 *Home Page*
 
-![Screenshot 4](/images/chatbot.png)
 
+<img src="/images/chatbot.png" width = 400 hight="800"/>
 *Chatbot*
 
-![Screenshot 5](/images/uploadimage.jpg)
-
+<img src="/images/uploadimage.jpg" width = 400 hight="800"/>
 *Upload Image*
 
-![Screenshot 6](/images/afteruploadingimage.jpg)
+<img src="/images/afteruploadingimage.jpg" width = 400 hight="800"/>
 
 *Result after Upload image*
-
-![Screenshot 3](/images/reportfinal.png)
-![Screenshot 3](/images/breainreportimage.png)
+<img src="/images/reportfinal.png" width = 400 hight="800"/>
+<img src="/images/breainreportimage.png" width = 400 hight="800"/>
 
 *Report Generated*
 
