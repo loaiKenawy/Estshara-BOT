@@ -46,7 +46,8 @@ Here are some screenshots showcasing the functionality and user interface of the
 ![Screenshot 1](/images/register.jpg)
 
 *Register Page*
-<img src="/images/login.jpg" width = 400 hight="800"/>
+
+![Screenshot 1](/images/login.jpg)
 
 *Login Page*
 
